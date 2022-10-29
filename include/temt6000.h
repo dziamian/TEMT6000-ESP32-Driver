@@ -7,16 +7,14 @@
 #include "driver/adc.h"
 #include "esp_adc_cal.h"
 
-typedef enum TEMT6000_powersupply_t TEMT6000_powersupply_t;
-typedef struct TEMT6000_t           TEMT6000_t;
+#include "temt6000_types.h"
 
-typedef float                       TEMT6000_intensity_t;
-typedef float                       TEMT6000_illuminance_t;
+typedef struct TEMT6000_t           TEMT6000_t;
 
 struct TEMT6000_t
 {
-    esp_adc_cal_characteristics_t adcChars;
-    adc_channel_t channel;
+    esp_adc_cal_characteristics_t   adcChars;
+    adc_channel_t                   channel;
 };
 
 bool temt6000__Init(TEMT6000_t *device, adc_unit_t unit, adc1_channel_t channel);
