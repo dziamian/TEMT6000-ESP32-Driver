@@ -7,7 +7,7 @@
 #include "driver/adc.h"
 #include "esp_adc_cal.h"
 
-#include "temt6000_types.h"
+#include "temt6000_types_res.h"
 
 typedef struct TEMT6000_t           TEMT6000_t;
 
