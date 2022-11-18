@@ -19,7 +19,7 @@
 void temt6000_init_test(void)
 {
     TEMT6000_t device;
-    if (!temt6000__Init(&device, TEMT6000_ADC_UNIT, TEMT6000_ADC_CHANNEL))
+    if (TEMT6000_OK != temt6000__Init(&device, TEMT6000_ADC_UNIT, TEMT6000_ADC_CHANNEL))
     {
         ESP_LOGI(TAG, "Failure while initializing TEMT6000 driver.");
         return;
@@ -33,7 +33,7 @@ void temt6000_init_test(void)
 void temt6000_reading_test(void)
 {
     TEMT6000_t device;
-    if (!temt6000__Init(&device, TEMT6000_ADC_UNIT, TEMT6000_ADC_CHANNEL))
+    if (TEMT6000_OK != temt6000__Init(&device, TEMT6000_ADC_UNIT, TEMT6000_ADC_CHANNEL))
     {
         ESP_LOGI(TAG, "Failure while initializing TEMT6000 driver.");
         return;
@@ -42,7 +42,7 @@ void temt6000_reading_test(void)
     while (1)
     {
         TEMT6000_intensity_t lightIntensity;
-        if (!temt6000__ReadLightIntensity(&device, TEMT6000_SAMPLES_NO, &lightIntensity))
+        if (TEMT6000_OK != temt6000__ReadLightIntensity(&device, TEMT6000_SAMPLES_NO, &lightIntensity))
         {
             ESP_LOGI(TAG, "Failure while reading light intensity...");
         }
@@ -52,7 +52,7 @@ void temt6000_reading_test(void)
         }
         
         TEMT6000_illuminance_t illuminance;
-        if (!temt6000__ReadIlluminance(&device, TEMT6000_SAMPLES_NO, &illuminance))
+        if (TEMT6000_OK != temt6000__ReadIlluminance(&device, TEMT6000_SAMPLES_NO, &illuminance))
         {
             ESP_LOGI(TAG, "Failure while reading illuminance...");
         }
