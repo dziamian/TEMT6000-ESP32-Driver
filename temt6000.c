@@ -72,7 +72,7 @@ TEMT6000_error_t temt6000__Init(TEMT6000_t * const device, const adc_unit_t unit
     return TEMT6000_OK;
 }
 
-TEMT6000_error_t temt6000__ReadIlluminance(TEMT6000_t * const device, const uint32_t samplesNo, TEMT6000_illuminance_t * const illuminanceOut)
+TEMT6000_error_t temt6000__ReadIlluminance(const TEMT6000_t * const device, const uint32_t samplesNo, TEMT6000_illuminance_t * const illuminanceOut)
 {
     if (!device || !illuminanceOut)
     {
@@ -106,7 +106,7 @@ TEMT6000_error_t temt6000__ReadIlluminance(TEMT6000_t * const device, const uint
     return TEMT6000_OK;
 }
 
-TEMT6000_error_t temt6000__ReadLightIntensity(TEMT6000_t * const device, const uint32_t samplesNo, TEMT6000_intensity_t * const intensityOut)
+TEMT6000_error_t temt6000__ReadLightIntensity(const TEMT6000_t * const device, const uint32_t samplesNo, TEMT6000_intensity_t * const intensityOut)
 {
     TEMT6000_error_t status;
     if (!intensityOut)
