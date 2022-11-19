@@ -40,6 +40,7 @@ typedef struct TEMT6000_t           TEMT6000_t;
 /**
  * @brief Describes characteristics of single TEMT6000.
  * 
+ * @note Call temt6000__Init() method to initialize this structure.
  */
 struct TEMT6000_t
 {
