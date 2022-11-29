@@ -13,7 +13,8 @@ var searchData=
   ['temt6000_5filluminance_5ft_10',['TEMT6000_illuminance_t',['../temt6000__types__res_8h.html#aefcb546cf7e218b23052d4ad8c53a348',1,'temt6000_types_res.h']]],
   ['temt6000_5fintensity_5ft_11',['TEMT6000_intensity_t',['../temt6000__types__res_8h.html#a1ae1923fbafe1bba2d7c628fee39f083',1,'temt6000_types_res.h']]],
   ['temt6000_5finv_5farg_12',['TEMT6000_INV_ARG',['../temt6000__error__codes_8h.html#aced9e8db8f20f1d80b4c7fa7e482c29aaa9a8b750ddb542a35fee88e38597f033',1,'temt6000_error_codes.h']]],
-  ['temt6000_5fok_13',['TEMT6000_OK',['../temt6000__error__codes_8h.html#aced9e8db8f20f1d80b4c7fa7e482c29aa4aad317af303f6c561515fa484d99d4b',1,'temt6000_error_codes.h']]],
-  ['temt6000_5ft_14',['TEMT6000_t',['../struct_t_e_m_t6000__t.html',1,'']]],
-  ['temt6000_5ftypes_5fres_2eh_15',['temt6000_types_res.h',['../temt6000__types__res_8h.html',1,'']]]
+  ['temt6000_5fmeasurement_5fdata_5ft_13',['TEMT6000_measurement_data_t',['../struct_t_e_m_t6000__measurement__data__t.html',1,'']]],
+  ['temt6000_5fok_14',['TEMT6000_OK',['../temt6000__error__codes_8h.html#aced9e8db8f20f1d80b4c7fa7e482c29aa4aad317af303f6c561515fa484d99d4b',1,'temt6000_error_codes.h']]],
+  ['temt6000_5ft_15',['TEMT6000_t',['../struct_t_e_m_t6000__t.html',1,'']]],
+  ['temt6000_5ftypes_5fres_2eh_16',['temt6000_types_res.h',['../temt6000__types__res_8h.html',1,'']]]
 ];

@@ -45,19 +45,19 @@ if (TEMT6000_OK != temt6000__Init(&device, TEMT6000_ADC_UNIT, TEMT6000_ADC_CHANN
 
 while (1)
 {
-    TEMT6000_intensity_t lightIntensity;
-    if (TEMT6000_OK != temt6000__ReadLightIntensity(&device, TEMT6000_SAMPLES_NO, &lightIntensity))
+    TEMT6000_measurement_data_t measurement;
+    if (TEMT6000_OK != temt6000__ReadLightIntensity(&device, TEMT6000_SAMPLES_NO, &measurement.lightIntensity))
     {
         // Error handling
     }
-    printf("Light intensity: %.2f%%", lightIntensity);
+    printf("Light intensity: %.2f%%", measurement.lightIntensity);
     
     TEMT6000_illuminance_t illuminance;
-    if (TEMT6000_OK != temt6000__ReadIlluminance(&device, TEMT6000_SAMPLES_NO, &illuminance))
+    if (TEMT6000_OK != temt6000__ReadIlluminance(&device, TEMT6000_SAMPLES_NO, &measurement.illuminance))
     {
         // Error handling
     }
-    printf("Illuminance: %.2f lux", illuminance);
+    printf("Illuminance: %.2f lux", measurement.illuminance);
 
     // Delay infinite loop for some time
 }

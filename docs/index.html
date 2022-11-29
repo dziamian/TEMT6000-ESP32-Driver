@@ -130,28 +130,28 @@ Example</h1>
 <div class="line"> </div>
 <div class="line"><span class="keywordflow">while</span> (1)</div>
 <div class="line">{</div>
-<div class="line">    <a class="code hl_typedef" href="temt6000__types__res_8h.html#a1ae1923fbafe1bba2d7c628fee39f083">TEMT6000_intensity_t</a> lightIntensity;</div>
-<div class="line">    <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="temt6000__error__codes_8h.html#aced9e8db8f20f1d80b4c7fa7e482c29aa4aad317af303f6c561515fa484d99d4b">TEMT6000_OK</a> != <a class="code hl_function" href="temt6000_8h.html#a498f8cf028cc856b6d2a8568014f798e">temt6000__ReadLightIntensity</a>(&amp;device, TEMT6000_SAMPLES_NO, &amp;lightIntensity))</div>
+<div class="line">    <a class="code hl_struct" href="struct_t_e_m_t6000__measurement__data__t.html">TEMT6000_measurement_data_t</a> measurement;</div>
+<div class="line">    <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="temt6000__error__codes_8h.html#aced9e8db8f20f1d80b4c7fa7e482c29aa4aad317af303f6c561515fa484d99d4b">TEMT6000_OK</a> != <a class="code hl_function" href="temt6000_8h.html#a498f8cf028cc856b6d2a8568014f798e">temt6000__ReadLightIntensity</a>(&amp;device, TEMT6000_SAMPLES_NO, &amp;measurement.lightIntensity))</div>
 <div class="line">    {</div>
 <div class="line">        <span class="comment">// Error handling</span></div>
 <div class="line">    }</div>
-<div class="line">    printf(<span class="stringliteral">&quot;Light intensity: %.2f%%&quot;</span>, lightIntensity);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;Light intensity: %.2f%%&quot;</span>, measurement.lightIntensity);</div>
 <div class="line">    </div>
 <div class="line">    <a class="code hl_typedef" href="temt6000__types__res_8h.html#aefcb546cf7e218b23052d4ad8c53a348">TEMT6000_illuminance_t</a> illuminance;</div>
-<div class="line">    <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="temt6000__error__codes_8h.html#aced9e8db8f20f1d80b4c7fa7e482c29aa4aad317af303f6c561515fa484d99d4b">TEMT6000_OK</a> != <a class="code hl_function" href="temt6000_8h.html#a801a177301e3d16c10f8e34b691ec69d">temt6000__ReadIlluminance</a>(&amp;device, TEMT6000_SAMPLES_NO, &amp;illuminance))</div>
+<div class="line">    <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="temt6000__error__codes_8h.html#aced9e8db8f20f1d80b4c7fa7e482c29aa4aad317af303f6c561515fa484d99d4b">TEMT6000_OK</a> != <a class="code hl_function" href="temt6000_8h.html#a801a177301e3d16c10f8e34b691ec69d">temt6000__ReadIlluminance</a>(&amp;device, TEMT6000_SAMPLES_NO, &amp;measurement.illuminance))</div>
 <div class="line">    {</div>
 <div class="line">        <span class="comment">// Error handling</span></div>
 <div class="line">    }</div>
-<div class="line">    printf(<span class="stringliteral">&quot;Illuminance: %.2f lux&quot;</span>, illuminance);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;Illuminance: %.2f lux&quot;</span>, measurement.illuminance);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Delay infinite loop for some time</span></div>
 <div class="line">}</div>
+<div class="ttc" id="astruct_t_e_m_t6000__measurement__data__t_html"><div class="ttname"><a href="struct_t_e_m_t6000__measurement__data__t.html">TEMT6000_measurement_data_t</a></div><div class="ttdoc">Contains all measurement data from TEMT6000.</div><div class="ttdef"><b>Definition:</b> temt6000_types_res.h:42</div></div>
 <div class="ttc" id="astruct_t_e_m_t6000__t_html"><div class="ttname"><a href="struct_t_e_m_t6000__t.html">TEMT6000_t</a></div><div class="ttdoc">Describes characteristics of single TEMT6000.</div><div class="ttdef"><b>Definition:</b> temt6000.h:46</div></div>
 <div class="ttc" id="atemt6000_8h_html_a498f8cf028cc856b6d2a8568014f798e"><div class="ttname"><a href="temt6000_8h.html#a498f8cf028cc856b6d2a8568014f798e">temt6000__ReadLightIntensity</a></div><div class="ttdeci">TEMT6000_error_t temt6000__ReadLightIntensity(const TEMT6000_t *const device, const uint32_t samplesNo, TEMT6000_intensity_t *const intensityOut)</div><div class="ttdoc">Reads measured light intensity (%) by selected TEMT6000.</div><div class="ttdef"><b>Definition:</b> temt6000.c:109</div></div>
 <div class="ttc" id="atemt6000_8h_html_a801a177301e3d16c10f8e34b691ec69d"><div class="ttname"><a href="temt6000_8h.html#a801a177301e3d16c10f8e34b691ec69d">temt6000__ReadIlluminance</a></div><div class="ttdeci">TEMT6000_error_t temt6000__ReadIlluminance(const TEMT6000_t *const device, const uint32_t samplesNo, TEMT6000_illuminance_t *const illuminanceOut)</div><div class="ttdoc">Reads measured illuminance (lux) by selected TEMT6000.</div><div class="ttdef"><b>Definition:</b> temt6000.c:75</div></div>
 <div class="ttc" id="atemt6000_8h_html_ad1d5a8946a4e5e01dfd652b3d7c5df5c"><div class="ttname"><a href="temt6000_8h.html#ad1d5a8946a4e5e01dfd652b3d7c5df5c">temt6000__Init</a></div><div class="ttdeci">TEMT6000_error_t temt6000__Init(TEMT6000_t *const device, const adc_unit_t unit, const adc_channel_t channel)</div><div class="ttdoc">Initializes TEMT6000 device instance with given ADC characteristics.</div><div class="ttdef"><b>Definition:</b> temt6000.c:43</div></div>
 <div class="ttc" id="atemt6000__error__codes_8h_html_aced9e8db8f20f1d80b4c7fa7e482c29aa4aad317af303f6c561515fa484d99d4b"><div class="ttname"><a href="temt6000__error__codes_8h.html#aced9e8db8f20f1d80b4c7fa7e482c29aa4aad317af303f6c561515fa484d99d4b">TEMT6000_OK</a></div><div class="ttdeci">@ TEMT6000_OK</div><div class="ttdef"><b>Definition:</b> temt6000_error_codes.h:39</div></div>
-<div class="ttc" id="atemt6000__types__res_8h_html_a1ae1923fbafe1bba2d7c628fee39f083"><div class="ttname"><a href="temt6000__types__res_8h.html#a1ae1923fbafe1bba2d7c628fee39f083">TEMT6000_intensity_t</a></div><div class="ttdeci">float TEMT6000_intensity_t</div><div class="ttdef"><b>Definition:</b> temt6000_types_res.h:31</div></div>
 <div class="ttc" id="atemt6000__types__res_8h_html_aefcb546cf7e218b23052d4ad8c53a348"><div class="ttname"><a href="temt6000__types__res_8h.html#aefcb546cf7e218b23052d4ad8c53a348">TEMT6000_illuminance_t</a></div><div class="ttdeci">float TEMT6000_illuminance_t</div><div class="ttdef"><b>Definition:</b> temt6000_types_res.h:33</div></div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md5"></a>
 Documentation</h1>
