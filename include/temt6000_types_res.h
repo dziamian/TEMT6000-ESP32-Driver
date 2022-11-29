@@ -28,11 +28,11 @@
 #define TEMT6000_TYPES_RES_H
 
 /** Light intensity measured by the device */
-typedef float                           TEMT6000_intensity_t;
+typedef float                               TEMT6000_intensity_t;
 /** Illuminance measured by the device */
-typedef float                           TEMT6000_illuminance_t;
+typedef float                               TEMT6000_illuminance_t;
 
-typedef struct TEMT6000_light_data_t    TEMT6000_light_data_t;
+typedef struct TEMT6000_measurement_data_t  TEMT6000_measurement_data_t;
 
 /**
  * @brief Contains all measurement data from TEMT6000. 
