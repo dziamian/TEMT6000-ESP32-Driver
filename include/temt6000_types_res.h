@@ -40,8 +40,8 @@ typedef struct TEMT6000_measurement_data_t  TEMT6000_measurement_data_t;
  */
 struct TEMT6000_measurement_data_t
 {
-    TEMT6000_intensity_t    lightIntensity;
-    TEMT6000_illuminance_t  illuminance;
+    TEMT6000_intensity_t    lightIntensity; /**< Measured light intensity */
+    TEMT6000_illuminance_t  illuminance;    /**< Measured illuminance */
 };
 
 #endif /* TEMT6000_TYPES_RES_H */
